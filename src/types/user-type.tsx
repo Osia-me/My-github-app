@@ -1,9 +1,8 @@
 export type UserType = {
   id: number;
   name: string;
-  description: string;
-  followers: number;
-  following: number;
+  bio: string;
   repors: number;
   login: string;
+  avatar_url: string;
 };

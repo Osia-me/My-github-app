@@ -1,17 +1,17 @@
 import React from "react";
 import { useAppContext } from "../../../hooks/use-app-context";
-import "./search-content.css";
 import UserCard from "../../../components/user-card/user-card";
 
-function SearchContent() {
-  const { users } = useAppContext();
+function FavoritesContent() {
+  const { favourites, users } = useAppContext();
+  const favoritesUsers = users?.filter((user) => favourites?.includes(user.id));
 
   return (
     <div className="Search-content-container">
-      {users ? (
+      {favoritesUsers ? (
         <div className="Search-content-card">
-          {users.map((user, key) => (
-            <React.Fragment key={`user-${key}`}>
+          {favoritesUsers.map((user, key) => (
+            <React.Fragment>
               <UserCard key={`user-${key}`} user={user} />
               <hr className={"Search-content-hr"} />
             </React.Fragment>
@@ -24,4 +24,4 @@ function SearchContent() {
   );
 }
 
-export default SearchContent;
+export default FavoritesContent;

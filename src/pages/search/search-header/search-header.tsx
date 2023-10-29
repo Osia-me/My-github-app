@@ -1,10 +1,16 @@
 import React from "react";
 import { useAppContext } from "../../../hooks/use-app-context";
 import { AiOutlineSearch, AiOutlineStar } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 import "./search-header.css";
 
 function SearchHeader() {
   const { updateUsers } = useAppContext();
+  const navigate = useNavigate();
+
+  const redirectUser = () => {
+    navigate("/favorites");
+  };
 
   return (
     <div className="Search-header-content">
@@ -17,7 +23,7 @@ function SearchHeader() {
       />
       <AiOutlineStar
         className="Search-header-star"
-        onClick={() => console.log("CLICK")}
+        onClick={() => redirectUser()}
       />
     </div>
   );
