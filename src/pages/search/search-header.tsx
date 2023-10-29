@@ -1,8 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import "./header.css";
+import { useAppContext } from "../../hooks/use-app-context";
 
-function Header() {
+function SearchHeader() {
+  const { setUsers } = useAppContext();
+
   return (
     <header className="Header-container">
       <div className="Header-context">
@@ -12,4 +15,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default SearchHeader;

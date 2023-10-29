@@ -1,9 +1,9 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { UserType } from "./types/user-type";
 
 export default interface AppContextType {
   users: UserType[] | undefined;
-  setUsers: Dispatch<SetStateAction<UserType[] | undefined>>;
+  setUsers: (users: UserType[] | []) => void;
 }
 
 export const defaultValue: AppContextType = {
