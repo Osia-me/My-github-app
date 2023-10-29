@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getUsers = async (query: string) => {
-  await axios
+  return axios
     .get(`${process.env.REACT_APP_DEV_BASE_URL}/search/users?q=${query}`)
     .then(function (response) {
       return response;

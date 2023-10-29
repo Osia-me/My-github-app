@@ -5,4 +5,5 @@ export type UserType = {
   followers: number;
   following: number;
   repors: number;
+  login: string;
 };

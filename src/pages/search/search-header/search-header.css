@@ -1,0 +1,33 @@
+.Search-header-input {
+  width: 500px;
+  height: 30px;
+  border: 1px solid transparent;
+}
+
+.Search-header-input:focus {
+  outline: none;
+}
+
+.Search-header-input,
+.Search-header-input::placeholder {
+  font: 1.25rem/3 sans-serif;
+}
+
+.Search-header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+
+.Search-header-content svg {
+  display: flex;
+  align-self: center;
+  font: 1.25rem/3 sans-serif;
+  margin-right: 5px;
+  color: #747474;
+}
+
+.Search-header-star {
+  cursor: pointer;
+}

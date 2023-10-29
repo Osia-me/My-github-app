@@ -3,12 +3,12 @@ import { UserType } from "./types/user-type";
 
 export default interface AppContextType {
   users: UserType[] | undefined;
-  setUsers: (users: UserType[] | []) => void;
+  updateUsers: (query: string) => void;
 }
 
 export const defaultValue: AppContextType = {
   users: undefined,
-  setUsers: () => {
+  updateUsers: () => {
     /* Mock */
   },
 };

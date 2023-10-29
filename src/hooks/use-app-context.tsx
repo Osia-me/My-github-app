@@ -6,4 +6,5 @@ export const useAppContext = () => {
   if (!context) {
     throw new Error("AppContext is not ready");
   }
+  return context;
 };
