@@ -1,7 +1,7 @@
 import React from "react";
 import { useAppContext } from "../../../hooks/use-app-context";
-import "./search-content.css";
 import UserCard from "../../../components/user-card/user-card";
+import "./search-content.css";
 
 function SearchContent() {
   const { users } = useAppContext();

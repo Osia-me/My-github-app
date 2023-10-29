@@ -6,6 +6,8 @@ export default interface AppContextType {
   updateUsers: (query: string) => void;
   favourites: Array<number>;
   setFavourites: Dispatch<SetStateAction<any>>;
+  user: UserType | undefined;
+  setUser: Dispatch<SetStateAction<UserType | undefined>>;
 }
 
 export const defaultValue: AppContextType = {
@@ -15,6 +17,10 @@ export const defaultValue: AppContextType = {
   },
   favourites: [],
   setFavourites: () => {
+    /* Mock */
+  },
+  user: undefined,
+  setUser: () => {
     /* Mock */
   },
 };
