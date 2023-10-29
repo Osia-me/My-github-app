@@ -3,6 +3,7 @@ import { UserType } from "../../types/user-type";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { useAppContext } from "../../hooks/use-app-context";
 import { useNavigate } from "react-router-dom";
+import handleRemoveItem from "../../helpers/handleRemoveItem";
 import "./user-card.css";
 
 type UserCardType = {
@@ -17,13 +18,6 @@ function UserCard({ user }: UserCardType) {
       return bio;
     }
     return `${bio.slice(0, 45)} ...`;
-  };
-
-  const handleRemoveItem = (userId: number) => {
-    const index = favourites.findIndex((id) => id === userId);
-    const temperary = [...favourites];
-    temperary.splice(index, 1);
-    setFavourites(temperary);
   };
 
   return (
@@ -43,7 +37,7 @@ function UserCard({ user }: UserCardType) {
         <AiFillStar
           className="UserCard-star"
           fill="orange"
-          onClick={() => handleRemoveItem(user.id)}
+          onClick={() => handleRemoveItem(user.id, favourites)}
         />
       ) : (
         <AiOutlineStar
