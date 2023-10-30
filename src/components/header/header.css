@@ -1,0 +1,15 @@
+.Header-container {
+  display: flex;
+  height: 50px;
+  -moz-box-shadow: 0 4px 4px rgba(181, 175, 175, 0.4);
+  -webkit-box-shadow: 0 4px 4px rgba(181, 175, 175, 0.4);
+  box-shadow: 0 4px 4px rgba(181, 175, 175, 0.4);
+  margin-bottom: 12px;
+}
+
+.Header-context {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

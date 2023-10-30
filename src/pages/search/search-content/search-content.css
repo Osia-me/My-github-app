@@ -1,0 +1,22 @@
+.Search-content-container {
+  display: flex;
+  justify-content: center;
+}
+
+.Search-content-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 500px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.Search-content-hr {
+  margin: 0 12px;
+  border: 0px;
+  border-bottom: 1px solid #e8e0e0;
+}
+
+.Search-content-hr:last-child {
+  display: none;
+}

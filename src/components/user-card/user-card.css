@@ -1,0 +1,38 @@
+.UserCard-container {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 10px 24px;
+}
+
+.UserCard-avatar {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  justify-content: center;
+  align-self: center;
+}
+
+.UserCard-info {
+  flex-grow: 1;
+}
+
+p {
+  margin: 6px 0px;
+  font-size: 14px;
+}
+
+.UserCard-bio {
+  color: gray;
+}
+
+.UserCard-star {
+  display: flex;
+  align-self: center;
+  font-size: 20px;
+  color: #747474;
+  cursor: pointer;
+}
